@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Blaster Puzzle</title>
+    <link rel="stylesheet" href="classic.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- First Screen -->
+        <div id="firstScreen">
+            <h2 style="width: 100%; text-align: center; margin: 0 0 20px;">Block Blaster Puzzle</h2>
+            
+            <button id="startButton">Start Game</button>
+        </div>
+        
+        <!-- Second Screen - Game -->
+        <div id="gameScreen" style="display: none;">
+            <!-- Game Status -->
+            <div id="gameStatus">
+                <div>Level: <span id="levelDisplay">1</span></div>
+                <div>Score: <span id="scoreDisplay">0</span></div>
+                <div>Target: <span id="targetDisplay">1000</span></div>
+                <div>Best: <span id="bestDisplay">0</span></div>
+            </div>
+            
+            <!-- Game Area -->
+            <div id="gameArea">
+                <div id="gameGrid"></div>
+                <div id="piecesArea">
+                    <div id="piece1" class="piece-container"></div>
+                    <div id="piece2" class="piece-container"></div>
+                    <div id="piece3" class="piece-container"></div>
+                </div>
+            </div>
+            
+            <!-- Mobile Controls -->
+            <div id="mobileControls" style="display: flex;">
+                <div id="rotateButton" class="mobile-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 4v6h6"/>
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Over Popup -->
+        <div id="gameOverPopup" style="display: none;">
+            <div class="popup-content">
+                <h2 id="gameOverTitle">Level Complete!</h2>
+                <div id="gameOverStats">
+                    <p>Score: <span id="finalScore">0</span></p>
+                    <p>Level: <span id="finalLevel">1</span></p>
+                </div>
+                <button id="playAgainButton">Next Level</button>
+                <button id="restartButton">Restart Game</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="classic.js"></script>
+</body>
+</html>

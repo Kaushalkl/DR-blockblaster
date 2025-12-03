@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Blaster</title>
+    <link rel="stylesheet" href="simple.css">
+    <style>
+    #firstScreen {
+        background: calc(rgb(117, 56, 56));
+        background-size: screen on auto;
+        height: 100vh;
+    }
+</style>
+
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- First Screen -->
+        <div id="firstScreen">
+            <h2 style="width: 100%; text-align: center; margin: 0 0 20px;">Block Blaster</h2>
+            <button id="startButton" class="game-button">Start Game</button>
+        </div>
+
+        <!-- Second Screen (Game) -->
+        <div id="gameScreen" style="display: none;">
+            <!-- Game Status -->
+            <div id="gameStatus">
+                <div>Score: <span id="score">0</span></div>
+                <div>Lines: <span id="lines">0</span></div>
+                <div>Level: <span id="level">1</span></div>
+            </div>
+
+            <!-- Game Board -->
+            <div id="gameBoard">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+                <canvas id="nextPieceCanvas" width="120" height="120"></canvas>
+                <div id="nextPieceLabel">   
+            </div>
+
+
+
+
+            <!-- Mobile Controls -->
+<div id="mobileControls" style="display: none;">
+    <div id="directionButtons" class="mobile-button-group">
+        <button id="upBtn" class="mobile-btn">▲</button>
+        <div>
+            <button id="leftBtn" class="mobile-btn">◀</button>
+            <button id="downBtn" class="mobile-btn">▼</button>
+            <button id="rightBtn" class="mobile-btn">▶</button>
+        </div>
+    </div>
+
+    <div id="actionButtons" class="mobile-button-group">
+        <button id="rotateBtn" class="mobile-btn">⟳</button>
+    </div>
+
+
+
+
+
+
+
+        <!-- Game Over Popup -->
+        <div id="gameOverPopup" style="display: none;">
+            <div class="popup-content">
+                <h2>Game Over</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Lines Cleared: <span id="finalLines">0</span></p>
+                <button id="playAgainButton" class="game-button">Play Again</button>
+            </div>
+        </div>
+
+
+    <script src="simple.js"></script>
+
+</body>
+</html>

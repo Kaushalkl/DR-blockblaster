@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #474dcb;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#gameContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* First Screen Styles */
+#firstScreen {
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+#startGameBtn {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+#startGameBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Game Screen Styles */
+#gameScreen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#gameStatus {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    z-index: 100;
+    font-size: 18px;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#gameStatus div {
+    line-height: 1.5;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 3px solid #333;
+    background: linear-gradient(180deg, #001122 0%, #003366 100%);
+}
+
+/* Mobile Controls */
+/* Simple CSS to make the shoot button look better on mobile */
+#mobileControls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+#shootBtn {
+    background-color: #4CAF50; /* Green color */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#shootBtn:active {
+    background-color: #45a049;
+}
+
+/* Game Over Popup */
+#gameOverPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.popup-content p {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.popup-content button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background 0.2s;
+}
+
+.popup-content button:hover {
+    background: #ff5252;
+}
+
+#nextLevelBtn {
+    background: #4ecdc4 !important;
+}
+
+#nextLevelBtn:hover {
+    background: #26a69a !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #gameStatus {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .popup-content {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .popup-content h2 {
+        font-size: 24px;
+    }
+}

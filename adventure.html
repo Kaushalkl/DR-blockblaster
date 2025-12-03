@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Blaster</title>
+    <link rel="stylesheet" href="adventure.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- First Screen -->
+        <div id="firstScreen">
+
+
+            <h2 style="width: 100%; text-align: center; margin: 0 0 20px;">Block Blaster</h2>
+            <button id="startButton">Start Game</button>
+        </div>
+
+        <!-- Second Screen -->
+        <div id="secondScreen" style="display: none;">
+            <!-- Game Status -->
+            <div id="gameStatus">
+                <div>Level: <span id="levelDisplay">1</span></div>
+                <div>Score: <span id="scoreDisplay">0</span></div>
+                <div>Blocks Left: <span id="blocksLeftDisplay">0</span></div>
+            </div>
+
+            <!-- Game Board -->
+            <div id="gameBoard"></div>
+
+            <!-- Mobile Controls -->
+            <div id="mobileControls" style="display: none;">
+                <button id="hintButton" class="mobile-btn">💡</button>
+                <button id="resetButton" class="mobile-btn">🔄</button>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="gameOverModal" style="display: none;">
+            <div class="modal-content">
+                <h2 id="gameOverTitle">Level Complete!</h2>
+                <p id="gameOverMessage">Congratulations! You cleared all blocks!</p>
+                <p>Score: <span id="finalScore">0</span></p>
+                <button id="nextLevelButton">Next Level</button>
+                <button id="playAgainButton">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="adventure.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Shooter</title>
+    <link rel="stylesheet" href="challenge.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- First Screen -->
+        <div id="firstScreen">
+            <h2 style="width: 100%; text-align: center; margin: 0 0 20px;">Bubble Shooter</h2>
+            </h4>
+            
+            <button id="startGameBtn">Start Game</button>
+        </div>
+
+        <!-- Second Screen (Game) -->
+        <div id="gameScreen" style="display: none;">
+            <!-- Game Status -->
+            <div id="gameStatus">
+                <div>Level: <span id="levelDisplay">1</span></div>
+                <div>Score: <span id="scoreDisplay">0</span></div>
+                <div>Bubbles: <span id="bubblesDisplay">0</span></div>
+            </div>
+
+            <!-- Game Canvas -->
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- Mobile Controls -->
+            <div id="mobileControls" style="display: none;">
+                <button id="shootBtn" class="mobile-btn">shoot</button>
+            </div>
+
+            <!-- Game Over Popup -->
+            <div id="gameOverPopup" style="display: none;">
+                <div class="popup-content">
+                    <h2 id="gameOverTitle">Game Over</h2>
+                    <p id="gameOverMessage">Level Complete!</p>
+                    <button id="playAgainBtn">Play Again</button>
+                    <button id="nextLevelBtn" style="display: none;">Next Level</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="challenge.js"></script>
+</body>
+</html>
